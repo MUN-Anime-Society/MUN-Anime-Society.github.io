@@ -1,13 +1,13 @@
 html {
     height: 100%;
 }
-
+/* previous pink color: fc9af4*/
 body {
     text-align: center;
-    background-image: url('temp-background.PNG');
+    background-image: url('sky.jpg');
     max-width: 45em;
     margin: 0 auto;
-    color: #fc9af4;
+    color: #F3BADA;
     font-family: 'Boogaloo', cursive;
     /*font-family: 'Lato', sans-serif;*/
     height: 100%;
@@ -39,13 +39,17 @@ h2 {
     /*font-family: 'Amatic SC', cursive;*/
 }
 
-p {
+p, li {
     font-size: 1.4em;
-    color: rgb(223, 219, 219); 
+    color: rgb(223, 219, 219);
+}
+
+li {
+    list-style-type: none;
 }
 
 main {
-    background-color: #B7E3CC;
+    background-color: #fffded;
     padding: 0 2vh;
     border: 5px black inset;
     margin: 5vh 0;
@@ -54,13 +58,13 @@ main {
 #about {
     background-color: black;
     padding: 0 2vh 1vh 2vh;
-    border: 3px #fc9af4 inset;
+    border: 3px #F3BADA inset;
     margin-top: 2vh;
 }
 
 #about h2 {
     font-family: 'Shojumaru', cursive;
-    color: #fcab10;
+    color: #fce762;
 }
 
 #links {
@@ -73,19 +77,19 @@ main {
 
 #links h2 {
     color: black;
-    text-shadow: -1px -1px 0 #fc9af4, 1px -1px 0 #fc9af4, -1px 1px 0 #fc9af4, 1px 1px 0 #fc9af4;
+    text-shadow: -1px -1px 0 #F3BADA, 1px -1px 0 #F3BADA, -1px 1px 0 #F3BADA, 1px 1px 0 #F3BADA;
 }
 
 #calendar {
     background-color: black;
     padding: 0 2vh 1vh 2vh;
     margin-bottom: 2vh;
-    border: 3px #fc9af4 inset;
+    border: 3px #F3BADA inset;
 }
 
 #calendar h2 {
-    font-family: 'Bangers', cursive;
-    color: #f8333c;
+    font-family: 'Carter One', cursive;
+    color: #fce762;
 }
 
 #calendar-img {
@@ -93,9 +97,9 @@ main {
 }
 
 button {
-    border: 2px #fc9af4 inset;
+    border: 2px #F3BADA inset;
     background-color: black;
-    color: #fc9af4;
+    color: #F3BADA;
     font-size: 1em;
     padding: 0.5vh 1vh;
     cursor: pointer;
@@ -104,25 +108,20 @@ button {
 }
 
 button:hover {
-    color: #B7E3CC;
-}
-
-img {
-    max-width: 40vh;
-    height: auto;
+    color: #fce762;
 }
 
 footer, footer p {
     display: flex;
     justify-content: space-between;
-    color: #fc9af4;
+    color: #F3BADA;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     padding: 0 1vh;
 }
 
 footer a {
     text-decoration: none;
-    color: #fcab10;
+    color: #fce762;
 }
 
 footer a:hover {
