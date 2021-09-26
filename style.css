@@ -4,8 +4,8 @@ html {
 /* previous pink color: fc9af4*/
 body {
     text-align: center;
-    background-image: url('sky.jpg');
-    max-width: 45em;
+    background-image: url('sky.svg');
+    max-width: 40em;
     margin: 0 auto;
     color: #F3BADA;
     font-family: 'Boogaloo', cursive;
@@ -29,6 +29,7 @@ h1 {
     left: calc(-50vw + 50%);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-family: 'Permanent Marker', cursive;
+    overflow-wrap: anywhere;
 }
 
 h2 {
@@ -52,12 +53,12 @@ main {
     background-color: #fffded;
     padding: 0 2vh;
     border: 5px black inset;
-    margin: 5vh 0;
+    margin: 5vh 0 6vh;
 }
 
 #about {
     background-color: black;
-    padding: 0 2vh 1vh 2vh;
+    padding: 0 8vh 1vh;
     border: 3px #F3BADA inset;
     margin-top: 2vh;
 }
@@ -92,8 +93,8 @@ main {
     color: #fce762;
 }
 
-#calendar-img {
-    margin-bottom: 2vh;
+#calendar ul {
+    padding-left: 0;
 }
 
 button {
@@ -121,9 +122,14 @@ footer, footer p {
 
 footer a {
     text-decoration: none;
-    color: #fce762;
+    color: #F3BADA;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: #fce762;
+}
+
+#space {
+    height: 3vh;
 }
