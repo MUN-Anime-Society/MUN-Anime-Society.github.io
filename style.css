@@ -56,6 +56,14 @@ main {
     margin: 5vh 0 6vh;
 }
 
+a {
+    color: #F3BADA;
+}
+
+a:hover {
+    color: #fce762;
+}
+
 #about {
     background-color: black;
     padding: 0 8vh 1vh;
