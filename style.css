@@ -31,12 +31,15 @@ h1 {
     font-family: 'Permanent Marker', cursive;
     overflow-wrap: anywhere;
 }
+h1 a{
+    text-decoration: none;
+}
 
 h2 {
     font-size: 2em;
     font-family: 'Permanent Marker', cursive;
     margin-top: 2vh;
-    color: #B7E3CC;
+    color: #fce762;
     /*font-family: 'Amatic SC', cursive;*/
 }
 
@@ -62,6 +65,13 @@ a {
 
 a:hover {
     color: #fce762;
+}
+
+#manga-preview {
+    background-color: black;
+    padding: 0 2vh 1vh 2vh;
+    margin-bottom: 4vh;
+    border: 3px #F3BADA inset;
 }
 
 #about {
@@ -140,4 +150,11 @@ footer a:hover {
 
 #space {
     height: 3vh;
+}
+
+#manga-main {
+    background-color: black;
+    padding: 0 2vh 1vh 2vh;
+    margin: 2vh 0 4vh 0;
+    border: 3px #F3BADA inset;
 }
