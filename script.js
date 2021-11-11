@@ -20,7 +20,6 @@ function niceDate(dateString) {
     let month = getMonth(dateArr[1]);
     let day = dateArr[2];
     let year = dateArr[0];
-    console.log(dateArr);
     return month + " " + day + ", " + year;
 }
 

@@ -167,9 +167,35 @@ footer a:hover {
     height: 3vh;
 }
 
+/* ---------------------------------------------------
+    LIBRARY-PAGE
+   ---------------------------------------------------*/
+
 #library-main {
     background-color: var(--black);
     padding: 0 2vh 1vh 2vh;
-    margin: 2vh 0 4vh 0;
+    margin: 2vh 0;
     border: 3px var(--pink) inset;
+}
+
+#library-main p {
+    padding-left: 2vh;
+}
+
+#manga-list {
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 4vh;
+    max-width: 40vh;
+}
+
+#manga-list ul, li {
+    padding: 0;
+    margin-left: 0;
+}
+
+.btm-nav {
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-evenly;
 }
