@@ -1,13 +1,25 @@
+:root {
+    --pink: #F3BADA;
+    --yellow: #fce762;
+    --black: #000;
+    --white-text: rgb(223, 219, 219);
+    --white-bkgd: #fffded;
+}
+
+/* ---------------------------------------------------
+    GENERAL
+   ---------------------------------------------------*/
+
 html {
     height: 100%;
 }
-/* previous pink color: fc9af4*/
+
 body {
     text-align: center;
     background-image: url('sky.svg');
     max-width: 40em;
     margin: 0 auto;
-    color: #F3BADA;
+    color: var(--pink);
     font-family: 'Boogaloo', cursive;
     /*font-family: 'Lato', sans-serif;*/
     height: 100%;
@@ -27,53 +39,69 @@ h1 {
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
     font-family: 'Permanent Marker', cursive;
     overflow-wrap: anywhere;
+}
+
+h1 a{
+    text-decoration: none;
+}
+
+main {
+    background-color: var(--white-bkgd);
+    padding: 0 2vh;
+    border: 5px var(--black) inset;
+    margin: 5vh 0 6vh;
 }
 
 h2 {
     font-size: 2em;
     font-family: 'Permanent Marker', cursive;
     margin-top: 2vh;
-    color: #B7E3CC;
+    color: var(--yellow);
     /*font-family: 'Amatic SC', cursive;*/
 }
 
 p, li {
     font-size: 1.4em;
-    color: rgb(223, 219, 219);
+    color: var(--white-text);
 }
 
 li {
     list-style-type: none;
 }
 
-main {
-    background-color: #fffded;
-    padding: 0 2vh;
-    border: 5px black inset;
-    margin: 5vh 0 6vh;
-}
-
 a {
-    color: #F3BADA;
+    color: var(--pink);
 }
 
 a:hover {
-    color: #fce762;
+    color: var(--yellow);
+}
+
+/* ---------------------------------------------------
+    SUB-SECTIONS
+   ---------------------------------------------------*/
+
+.sub-section, button {
+    background-color: var(--black);
+    border: 3px var(--pink) inset;
+}
+
+#library-preview {
+    padding: 0 2vh 1vh 2vh;
+    margin-bottom: 4vh;
 }
 
 #about {
-    background-color: black;
     padding: 0 8vh 1vh;
-    border: 3px #F3BADA inset;
     margin-top: 2vh;
 }
 
 #about h2 {
     font-family: 'Shojumaru', cursive;
-    color: #fce762;
+    color: var(--yellow);
 }
 
 #links {
@@ -85,30 +113,12 @@ a:hover {
 }
 
 #links h2 {
-    color: black;
-    text-shadow: -1px -1px 0 #F3BADA, 1px -1px 0 #F3BADA, -1px 1px 0 #F3BADA, 1px 1px 0 #F3BADA;
-}
-
-#calendar {
-    background-color: black;
-    padding: 0 2vh 1vh 2vh;
-    margin-bottom: 2vh;
-    border: 3px #F3BADA inset;
-}
-
-#calendar h2 {
-    font-family: 'Carter One', cursive;
-    color: #fce762;
-}
-
-#calendar ul {
-    padding-left: 0;
+    color: var(--black);
+    text-shadow: -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
 }
 
 button {
-    border: 2px #F3BADA inset;
-    background-color: black;
-    color: #F3BADA;
+    color: var(--pink);
     font-size: 1em;
     padding: 0.5vh 1vh;
     cursor: pointer;
@@ -117,27 +127,75 @@ button {
 }
 
 button:hover {
-    color: #fce762;
+    color: var(--yellow);
+    border: 3px var(--yellow) inset;
+}
+
+#calendar {
+    padding: 0 2vh 1vh 2vh;
+    margin-bottom: 2vh;
+}
+
+#calendar h2 {
+    font-family: 'Carter One', cursive;
+    color: var(--yellow);
+}
+
+#calendar ul {
+    padding-left: 0;
 }
 
 footer, footer p {
     display: flex;
     justify-content: space-between;
-    color: #F3BADA;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: var(--pink);
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
     padding: 0 1vh;
 }
 
 footer a {
     text-decoration: none;
-    color: #F3BADA;
+    color: var(--pink);
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #fce762;
+    color: var(--yellow);
 }
 
 #space {
     height: 3vh;
+}
+
+/* ---------------------------------------------------
+    LIBRARY-PAGE
+   ---------------------------------------------------*/
+
+#library-main {
+    background-color: var(--black);
+    padding: 0 2vh 1vh 2vh;
+    margin: 2vh 0;
+    border: 3px var(--pink) inset;
+}
+
+#library-main p {
+    padding-left: 2vh;
+}
+
+#manga-list {
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 4vh;
+    max-width: 40vh;
+}
+
+#manga-list ul, li {
+    padding: 0;
+    margin-left: 0;
+}
+
+.btm-nav {
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-evenly;
 }

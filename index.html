@@ -3,15 +3,17 @@
     <head>
         <title>MUN Anime Society</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Lato&family=Open+Sans&family=Permanent+Marker&family=Roboto&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Boogaloo&family=Carter+One&family=Press+Start+2P&family=Shojumaru&display=swap" rel="stylesheet">   
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Lato&family=Open+Sans&family=Permanent+Marker&family=Roboto&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Boogaloo&family=Carter+One&family=Press+Start+2P&family=Shojumaru&display=swap" rel="stylesheet">   
     </head>
     <body>
-        <h1 id="title">MUN Anime Society</h1>
+        <h1 id="title"><a href="index.html">MUN Anime Society</a></h1>
+
         <main>
-            <div id="about">
+            <div id="about" class="sub-section">
                 <h2>About</h2>
                 <p id="about-blurb">
                     The MUN Anime Film Club is a community focused around Japanese pop-culture,
@@ -29,7 +31,15 @@
                 <a href="https://www.facebook.com/groups/stjohnsanime"><button>Facebook Page</button></a>
             </div>
 
-            <div id="calendar">
+            <div id="library-preview" class="sub-section">
+                <h2>Manga Library!</h2>
+                <p>
+                    The MUN Anime Film Club runs a manga library in UC 6010.
+                    Click <a href="library.html">here</a> to see a list of available manga to borrow.
+                </p>
+            </div>
+
+            <div id="calendar" class="sub-section">
                 <h2>Upcoming Events (Fall 2021)</h2>
                 <ul>
                     <li>September 17: Opening Movie</li>
@@ -39,7 +49,7 @@
                     <li>October 9: Midterm Fest</li>
                     <li>October 10: Midterm Fest</li>
                     <li>October 15: Member's Choice (Winter 2020)</li>
-                    <li>October 22: TBD</li>
+                    <li>October 22: Member's Choice (Winter 2020)</li>
                     <li>October 29: <a href="https://www.montreal.ca.emb-japan.go.jp/pdf/2021JFF_NL_Poster.pdf">Japanese Film Festival</a>
                     </li>
                     <li>October 30: Halloween</li>
@@ -53,7 +63,7 @@
             </div>
 
             <footer>
-                <p>Updated October 15, 2021</p>
+                <p id="date">Updated November 9, 2021</p>
                 <p><a href="https://github.com/MUN-Anime-Society/MUN-Anime-Society.github.io">github</a></p>
             </footer>
         </main>
