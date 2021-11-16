@@ -1,18 +1,22 @@
 // from https://codesnippet.io/github-api-tutorial/
 function getOrgRepo(orgName) {
-    const xhr = new XMLHttpRequest();
-    const url = `https://api.github.com/orgs/${orgName}/repos`;
-    xhr.open('GET', url, true);
+        const oldDate = document.getElementById("date");
+        if (oldDate) {
+            const xhr = new XMLHttpRequest();
+            const url = `https://api.github.com/orgs/${orgName}/repos`;
+            xhr.open('GET', url, true);
 
-    // what to do once request received
-    xhr.onload = function() {
-        const data = JSON.parse(this.response);
-        let dateString = data[0].updated_at;
-        let date = niceDate(dateString);
-        document.getElementById("date").innerHTML = "Updated " + date;
-    }
+            // what to do once request received
+            xhr.onload = function() {
+                const data = JSON.parse(this.response);
+                let dateString = data[0].updated_at;
+                let date = niceDate(dateString);
+                // check that function is for correct page
+                oldDate.innerHTML = "Updated " + date;
+            }
 
-    xhr.send();
+            xhr.send();
+        }
 }
 
 function niceDate(dateString) {
@@ -41,4 +45,20 @@ function getMonth(monthNum) {
     return months[monthNum];
 }
 
-getOrgRepo('MUN-Anime-Society');
+function sortList(ul) {
+    const ulRef = document.getElementById(ul);
+    // check that the function is being executed for the correct page
+    if (ulRef) {
+        let list = ulRef.getElementsByTagName("LI");
+        let sortedList = Array.from(list).sort((a, b) => a.innerHTML.localeCompare(b.innerHTML));
+        for (let i = 0; i < sortedList.length; i++) {
+            ulRef.appendChild(sortedList[i]);
+        }
+        console.log(sortedList);
+    }
+}
+
+window.onload = function() {
+    getOrgRepo('MUN-Anime-Society');
+    sortList("manga-list-ul");
+}
