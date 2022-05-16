@@ -117,6 +117,15 @@ a:hover {
     text-shadow: -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
 }
 
+#library-div {
+    text-decoration: none;
+}
+
+.fake-link {
+    text-decoration: underline;
+    color: var(--pink);
+}
+
 button {
     color: var(--pink);
     font-size: 1em;
