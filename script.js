@@ -1,19 +1,24 @@
 // from https://codesnippet.io/github-api-tutorial/
-function getOrgRepo(orgName) {
+function getOrgRepo(orgName, repoName) {
         const oldDate = document.getElementById("date");
         if (oldDate) {
             const xhr = new XMLHttpRequest();
-            const url = `https://api.github.com/orgs/${orgName}/repos`;
+            const url = `https://api.github.com/repos/${orgName}/${repoName}`;
             xhr.open('GET', url, true);
 
             // what to do once request received
             xhr.onload = function() {
                 const data = JSON.parse(this.response);
-                let dateString = data[0].updated_at;
+
+                console.log(data)
+
+                let dateString = data.pushed_at;
                 let date = niceDate(dateString);
                 // check that function is for correct page
                 oldDate.innerHTML = "Updated " + date;
             }
+
+            console.log(oldDate.innerHTML);
 
             xhr.send();
         }
@@ -21,7 +26,7 @@ function getOrgRepo(orgName) {
 
 function niceDate(dateString) {
     let dateArr = dateString.split(/-|T/);
-    let month = getMonth(dateArr[1]);
+    let month = getMonth(parseInt(dateArr[1]));
     let day = dateArr[2];
     let year = dateArr[0];
     return month + " " + day + ", " + year;
@@ -59,6 +64,6 @@ function sortList(ul) {
 }
 
 window.onload = function() {
-    getOrgRepo('MUN-Anime-Society');
+    getOrgRepo('MUN-Anime-Society', 'MUN-Anime-Society.github.io');
     sortList("manga-list-ul");
 }
