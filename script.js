@@ -9,16 +9,11 @@ function getOrgRepo(orgName, repoName) {
             // what to do once request received
             xhr.onload = function() {
                 const data = JSON.parse(this.response);
-
-                console.log(data)
-
                 let dateString = data.pushed_at;
                 let date = niceDate(dateString);
                 // check that function is for correct page
                 oldDate.innerHTML = "Updated " + date;
             }
-
-            console.log(oldDate.innerHTML);
 
             xhr.send();
         }
