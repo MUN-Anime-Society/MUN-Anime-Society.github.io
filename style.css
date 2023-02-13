@@ -185,22 +185,27 @@ footer a:hover {
     padding: 0 2vh 1vh 2vh;
     margin: 2vh 0;
     border: 3px var(--pink) inset;
+    text-align: left;
+}
+
+#library-main h2 {
+    text-align: center;
 }
 
 #library-main p {
     padding-left: 2vh;
 }
 
+summary {
+    font-size: 2em;
+}
+
 #manga-list {
-    text-align: justify;
-    margin: 0 auto;
-    margin-top: 4vh;
-    max-width: 40vh;
+    padding-left: 2vh;
 }
 
 #manga-list ul, li {
     padding: 0;
-    margin-left: 0;
 }
 
 .btm-nav {

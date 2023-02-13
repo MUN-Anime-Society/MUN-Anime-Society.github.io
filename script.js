@@ -61,4 +61,9 @@ function sortList(ul) {
 window.onload = function() {
     getOrgRepo('MUN-Anime-Society', 'MUN-Anime-Society.github.io');
     sortList("manga-list-ul");
+    sortList("novel-list-ul");
+    sortList("magazine-list-ul");
+    sortList("dvd-list-ul");
+    sortList("vhs-list-ul");
+    sortList("other-list-ul");
 }
