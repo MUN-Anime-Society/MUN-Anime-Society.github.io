@@ -32,16 +32,20 @@ body {
 }
 
 h1 {
-    font-size: 3em;
     margin-bottom: 0.3em;
     padding-top: 1vh;
-    font-size: 10vh;
+    font-size: 10vw;
     width: 99vw;
     position: relative;
     left: calc(-50vw + 50%);
     text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
     font-family: 'Permanent Marker', cursive;
     overflow-wrap: anywhere;
+}
+@media screen and (min-width: 850px) {
+    h1 {
+        font-size: 75px;
+    }
 }
 
 h1 a{
@@ -52,7 +56,7 @@ main {
     background-color: var(--white-bkgd);
     padding: 0 2vh;
     border: 5px var(--black) inset;
-    margin: 5vh 0 6vh;
+    margin: 5vw 0 6vw;
 }
 
 h2 {
@@ -89,13 +93,22 @@ a:hover {
     border: 3px var(--pink) inset;
 }
 
+.sub-section p, .sub-section li {
+    font-size: 20px;
+}
+@media screen and (min-width: 850px) {
+    .sub-section p, .sub-section li {
+        font-size: 1.4em;
+    }
+}
+
 #library-preview {
     padding: 0 2vh 1vh 2vh;
     margin-bottom: 4vh;
 }
 
 #about {
-    padding: 0 8vh 1vh;
+    padding: 0 2vh 1vh;
     margin-top: 2vh;
 }
 
@@ -180,7 +193,7 @@ footer a:hover {
     LIBRARY-PAGE
    ---------------------------------------------------*/
 
-#library-main {
+#library-page {
     background-color: var(--black);
     padding: 0 2vh 1vh 2vh;
     margin: 2vh 0;
@@ -188,11 +201,11 @@ footer a:hover {
     text-align: left;
 }
 
-#library-main h2 {
+#library-page h2 {
     text-align: center;
 }
 
-#library-main p {
+#library-page p {
     padding-left: 2vh;
 }
 
